@@ -1,0 +1,197 @@
+/* ------------------------------------------------------------------ */
+/* Hero (landing page)                                                 */
+/* Loaded after style.css, so these rules override the base hero.     */
+/* ------------------------------------------------------------------ */
+
+.hero {
+    --hero-green: #1f9d6f;
+    --hero-green-light: #e3f5ec;
+    --hero-green-border: #bfe6d3;
+
+    display: block;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 4rem 2rem 4.5rem;
+    text-align: center;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--hero-green-light);
+    border: 1px solid var(--hero-green-border);
+    color: #17694b;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: none;
+    padding: 0.45rem 1.25rem;
+    border-radius: 999px;
+    margin-bottom: 2.25rem;
+}
+
+.hero-badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--hero-green);
+}
+
+.hero-title {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: clamp(2.5rem, 6.5vw, 4.25rem);
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+    color: var(--ink);
+    margin-bottom: 1.75rem;
+}
+
+.hero-title-accent { color: var(--hero-green); }
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #5f5f5f;
+    max-width: 640px;
+    margin: 0 auto 3rem;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.1rem;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: var(--ink);
+    color: #ffffff;
+    padding: 1rem 2.25rem;
+    border-radius: 10px;
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.hero-btn:hover { background: var(--hero-green); }
+
+/* Dashboard mockup ------------------------------------------------- */
+
+.hero-mock {
+    margin-top: 4rem;
+    background: #f6f6f4;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 1.4rem 1.5rem 1.5rem;
+    text-align: left;
+    box-shadow: 0 4px 24px rgba(15, 15, 15, 0.04);
+}
+
+.hero-mock-dots {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.1rem;
+}
+
+.dot {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+}
+
+.dot-red    { background: #ef8a8a; }
+.dot-yellow { background: #f4c45a; }
+.dot-green  { background: #8fdcc0; }
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.hero-stat,
+.hero-bars {
+    background: #ffffff;
+    border: 1px solid var(--border-soft);
+    border-radius: 12px;
+}
+
+.hero-stat {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem 1.5rem;
+}
+
+.hero-stat-label {
+    font-size: 0.95rem;
+    color: #7a7a7a;
+    margin-bottom: 0.5rem;
+}
+
+.hero-stat-value {
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 0.35rem;
+}
+
+.hero-stat-note {
+    font-size: 0.95rem;
+    color: #8a8a8a;
+}
+
+.note-up   { color: #d64545; }
+.note-good { color: var(--hero-green); }
+
+.hero-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    padding: 1.5rem 1.5rem 1.6rem 2rem;
+}
+
+.hero-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.hero-bar-label {
+    width: 3.5rem;
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+}
+
+.hero-bar-track {
+    flex: 1;
+    height: 10px;
+    background: #efeee9;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.hero-bar {
+    height: 100%;
+    border-radius: 999px;
+}
+
+.bar-food   { background: #eba22f; }
+.bar-travel { background: #3d87dd; }
+.bar-bills  { background: #8b73d8; }
+
+@media (max-width: 600px) {
+    .hero { padding: 3rem 1rem 2.5rem; }
+    .hero-subtitle { font-size: 1.1rem; }
+    .hero-mock { margin-top: 3rem; padding: 1rem; }
+    .hero-stats { grid-template-columns: 1fr; }
+    .hero-bars { padding: 1.25rem; }
+    .hero-bar-row { gap: 1rem; }
+}
