@@ -15,6 +15,16 @@ def get_db():
     return conn
 
 
+def get_user_by_email(email):
+    """Return the user row matching email, or None if no such user exists."""
+    conn = get_db()
+    user = conn.execute(
+        "SELECT * FROM users WHERE email = ?", (email,)
+    ).fetchone()
+    conn.close()
+    return user
+
+
 def init_db():
     """Create the users and expenses tables if they don't already exist."""
     conn = get_db()
